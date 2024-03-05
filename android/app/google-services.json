@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658632391585",
+    "project_id": "todo-list-dbz",
+    "storage_bucket": "todo-list-dbz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658632391585:android:85d06a973a62a1d03d29e0",
+        "android_client_info": {
+          "package_name": "br.com.saraiva.todo_list_provider"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxcSYQn3hyLvNAZTm3Qa3nljYi8EkSMv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
