@@ -13,14 +13,22 @@ class DefaultListenerNotifier {
   void listener({
     required BuildContext context,
     required SuccessVoidCallBack successVoidCallBack,
+    ErrorVoidCallBack? errorVoidCallBack,
+    AlwaysVoidCallBack? alwaysVoidCallBack,
   }) {
     changeNotifer.addListener(() {
+      if (alwaysVoidCallBack != null) {
+        alwaysVoidCallBack(changeNotifer, this);
+      }
       if (changeNotifer.loading) {
         Loader.show(context);
       } else {
         Loader.hide();
       }
       if (changeNotifer.hasError) {
+        if (errorVoidCallBack != null) {
+          errorVoidCallBack(changeNotifer, this);
+        }
         Messages.of(context).showError(changeNotifer.error ?? 'Erro intenro');
       } else if (changeNotifer.isSuccess) {
         successVoidCallBack(changeNotifer, this);
@@ -34,6 +42,14 @@ class DefaultListenerNotifier {
 }
 
 typedef SuccessVoidCallBack = void Function(
+  DefaultChangeNotifer notifer,
+  DefaultListenerNotifier listenerInstance,
+);
+typedef ErrorVoidCallBack = void Function(
+  DefaultChangeNotifer notifer,
+  DefaultListenerNotifier listenerInstance,
+);
+typedef AlwaysVoidCallBack = void Function(
   DefaultChangeNotifer notifer,
   DefaultListenerNotifier listenerInstance,
 );

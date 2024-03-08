@@ -9,6 +9,7 @@ class Messages {
   }
 
   void showError(String message) => _showMessage(message, Colors.red);
+  void showSuccess(String message) => _showMessage(message, Colors.green);
   void showInfo(String message) => _showMessage(message, context.primaryColor);
 
   void _showMessage(String message, Color color) {
