@@ -20,10 +20,10 @@ class UserRepositoryImpl implements UserRepository {
       print(e);
       print(s);
       if (e.code == 'email-already-in-use') {
-        final logintypes = await _auth.fetchSignInMethodsForEmail(email);
-        if (logintypes.contains('passoword')) {
+        final loginTypes = await _auth.fetchSignInMethodsForEmail(email);
+        if (loginTypes.contains('password')) {
           throw AuthException(
-              message: 'E-mail já utilizado por fabvor escolha outro e-mail');
+              message: 'E-mail já utilizado por favor escolha outro e-mail');
         } else {
           throw AuthException(
               message:
