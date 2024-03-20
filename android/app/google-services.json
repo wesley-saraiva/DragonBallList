@@ -12,7 +12,20 @@
           "package_name": "br.com.saraiva.todo_list_provider"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "658632391585-73eqrr8c288hhnobovl421olf5iq5tm3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.saraiva.todo_list_provider",
+            "certificate_hash": "57e323e68a8201301ab7411cfe4a10e77f9fb5bf"
+          }
+        },
+        {
+          "client_id": "658632391585-i3e23tnjl9mk8pk6v9lnccquco4di6ci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAxcSYQn3hyLvNAZTm3Qa3nljYi8EkSMv8"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658632391585-i3e23tnjl9mk8pk6v9lnccquco4di6ci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

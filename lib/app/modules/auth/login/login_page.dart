@@ -165,7 +165,9 @@ class _LoginPageState extends State<LoginPage> {
                               shape: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(30),
                                   borderSide: BorderSide.none),
-                              onPressed: () {},
+                              onPressed: () {
+                                context.read<LoginController>().ggoleLogin();
+                              },
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
