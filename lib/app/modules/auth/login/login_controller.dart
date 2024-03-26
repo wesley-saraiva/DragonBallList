@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:todo_list_provider/app/core/notifier/default_change_notifer.dart';
-import 'package:todo_list_provider/app/core/ui/message.dart';
 import 'package:todo_list_provider/app/exception/auth_exception.dart';
 import 'package:todo_list_provider/app/services/user/user_service.dart';
-import 'package:todo_list_provider/app/repositories/user/user_repository_impl.dart';
 
 class LoginController extends DefaultChangeNotifer {
   final UserService _userService;
@@ -23,9 +20,11 @@ class LoginController extends DefaultChangeNotifer {
       if (user != null) {
         success();
       } else {
-        setError('Erroa ao realizar login com goolge');
+        _userService.logout();
+        setError('Erro ao realizar login com goolge');
       }
     } on AuthException catch (e) {
+      _userService.logout();
       setError(e.message);
     } finally {
       hideLoading();

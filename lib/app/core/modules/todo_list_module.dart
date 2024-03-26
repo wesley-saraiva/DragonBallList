@@ -8,7 +8,7 @@ abstract class TodoListModule {
 
   TodoListModule(
       {required Map<String, WidgetBuilder> routes,
-      required List<SingleChildWidget>? bindings})
+      List<SingleChildWidget>? bindings})
       : _routes = routes,
         _bindings = bindings;
 

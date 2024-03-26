@@ -113,5 +113,22 @@ class UserRepositoryImpl implements UserRepository {
         throw AuthException(message: 'Erro ao realizar login');
       }
     }
+    return null;
+  }
+
+  @override
+  Future<void> logout() async {
+    await GoogleSignIn().signOut();
+    _auth.signOut();
+    print('Usuario desconectado');
+  }
+
+  @override
+  Future<void> updateDisplayName(String name) async {
+    final user = _auth.currentUser;
+    if (user != null) {
+      await user.updateDisplayName(name);
+      user.reload();
+    }
   }
 }

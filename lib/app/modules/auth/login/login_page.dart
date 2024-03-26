@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:todo_list_provider/app/core/notifier/default_listener_notifier.dart';
