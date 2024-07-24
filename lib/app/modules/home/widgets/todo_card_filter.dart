@@ -31,16 +31,18 @@ class _TodoCardFilterState extends State<TodoCardFilter> {
           Text(
             '10 TASKS',
             style:
-                context.titleStyle.copyWith(fontSize: 10, color: Colors.white),
+                context.titleStyle.copyWith(fontSize: 10, color: Colors.yellow),
           ),
           Text(
             'Hoje',
             style: TextStyle(
-                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.yellow),
           ),
           LinearProgressIndicator(
             backgroundColor: context.primaryColorLight,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.yellow),
             value: 0.2,
           ),
         ],

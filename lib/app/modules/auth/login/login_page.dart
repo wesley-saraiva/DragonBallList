@@ -108,7 +108,10 @@ class _LoginPageState extends State<LoginPage> {
                                           'Digite um e-mail para recuperar senha');
                                     }
                                   },
-                                  child: Text('Esqueceu sua senha?'),
+                                  child: Text(
+                                    'Esqueceu sua senha?',
+                                    style: context.titleStyle2,
+                                  ),
                                 ),
                                 ElevatedButton(
                                   onPressed: () {
@@ -130,7 +133,10 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                   child: Padding(
                                     padding: const EdgeInsets.all(10.0),
-                                    child: Text('Login'),
+                                    child: Text(
+                                      'Login',
+                                      style: context.titleStyle2,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -178,7 +184,10 @@ class _LoginPageState extends State<LoginPage> {
                                     Navigator.of(context)
                                         .pushNamed('/register');
                                   },
-                                  child: Text('Cadastra-se'),
+                                  child: Text(
+                                    'Cadastra-se',
+                                    style: context.titleStyle2,
+                                  ),
                                 ),
                               ],
                             ),

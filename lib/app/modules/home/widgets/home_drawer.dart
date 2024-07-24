@@ -57,48 +57,48 @@ class _HomeDrawerState extends State<HomeDrawer> {
                       },
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
           ListTile(
             onTap: () {
               showDialog(
-                  context: context,
-                  builder: (_) {
-                    return AlertDialog(
-                      title: Text('Alterar Nome'),
-                      content: TextField(
-                        onChanged: (value) => nameVN.value = value,
+                context: context,
+                builder: (_) {
+                  return AlertDialog(
+                    title: Text('Alterar Nome'),
+                    content: TextField(
+                      onChanged: (value) => nameVN.value = value,
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: Text(
+                          'Cancelar',
+                          style: TextStyle(color: Colors.red),
+                        ),
                       ),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.of(context).pop(),
-                          child: Text(
-                            'Cancelar',
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () async {
-                            final nameValue = nameVN.value;
-                            if (nameValue.isEmpty) {
-                              Messages.of(context)
-                                  .showError('Nome obrigátorio');
-                            } else {
-                              Loader.show(context);
-                              await context
-                                  .read<UserService>()
-                                  .updateDisplayName(nameValue);
-                              Loader.hide();
-                              Navigator.of(context).pop();
-                            }
-                          },
-                          child: Text('Alterar'),
-                        ),
-                      ],
-                    );
-                  });
+                      TextButton(
+                        onPressed: () async {
+                          final nameValue = nameVN.value;
+                          if (nameValue.isEmpty) {
+                            Messages.of(context).showError('Nome obrigátorio');
+                          } else {
+                            Loader.show(context);
+                            await context
+                                .read<UserService>()
+                                .updateDisplayName(nameValue);
+                            Loader.hide();
+                            Navigator.of(context).pop();
+                          }
+                        },
+                        child: Text('Alterar'),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             title: Text('Alterar Nome'),
           ),

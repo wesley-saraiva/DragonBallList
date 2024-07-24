@@ -9,12 +9,12 @@ class TodoListUiConfig {
   static ThemeData get theme => ThemeData(
         useMaterial3: false,
         textTheme: GoogleFonts.mandaliTextTheme(),
-        primaryColor: Colors.lightBlue[300],
-        primaryColorLight: Color.fromARGB(255, 135, 136, 129),
+        primaryColor: const Color.fromARGB(255, 142, 216, 144),
+        primaryColorLight: Colors.white,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.lightBlue[300],
-          ),
+              backgroundColor: const Color.fromARGB(255, 248, 229, 57),
+              textStyle: TextStyle(color: Colors.green)),
         ),
       );
 }

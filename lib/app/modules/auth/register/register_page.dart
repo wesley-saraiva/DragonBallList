@@ -42,7 +42,6 @@ class _RegisterPageState extends State<RegisterPage> {
       context: context,
       successVoidCallBack: (notifer, listenerInstance) {
         listenerInstance.dispose();
-        Navigator.of(context).pop();
       },
       // errorVoidCallBack: (notifer, listenerInstance) => print('Deu Ruim!'),
     );
@@ -167,6 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           context
                               .read<RegisterController>()
                               .registerUser(email, password);
+                          Navigator.canPop(context);
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -176,7 +176,10 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
-                        child: Text('Salvar'),
+                        child: Text(
+                          'Salvar',
+                          style: context.titleStyle2,
+                        ),
                       ),
                     ),
                   ),

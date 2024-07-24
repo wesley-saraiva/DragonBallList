@@ -14,8 +14,8 @@ class TodoListLogo extends StatelessWidget {
           height: 200,
         ),
         Text(
-          'Todo List DBZ',
-          style: context.textTheme.titleLarge,
+          'Dragon Ball List',
+          style: context.titleStyle,
         ),
       ],
     );

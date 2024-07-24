@@ -24,7 +24,7 @@ class TodoListPage extends StatelessWidget {
             ),
           ],
       child: Builder(
-        builder: (_) => _page(context),
+        builder: (_) => _page(_),
       ),
     );
   }

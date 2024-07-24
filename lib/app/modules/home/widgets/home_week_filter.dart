@@ -25,7 +25,7 @@ class HomeWeekFilter extends StatelessWidget {
             locale: 'pt_BR',
             initialSelectedDate: DateTime.now(),
             selectionColor: context.primaryColor,
-            selectedTextColor: Colors.white,
+            selectedTextColor: Colors.yellow,
             monthTextStyle: TextStyle(fontSize: 8),
             dateTextStyle: TextStyle(fontSize: 13),
             dayTextStyle: TextStyle(fontSize: 13),
