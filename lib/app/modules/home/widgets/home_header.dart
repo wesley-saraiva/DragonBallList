@@ -8,22 +8,18 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Selector<AuthProvide, String>(
-            selector: (context, authProvide) =>
-                authProvide.user?.displayName ?? 'Não Informado',
-            builder: (_, value, __) {
-              return Text(
-                'E ai, $value',
-                style: context.titleStyle.copyWith(fontWeight: FontWeight.bold),
-              );
-            },
-          ),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Selector<AuthProvide, String>(
+        selector: (context, authProvide) =>
+            authProvide.user?.displayName ?? 'Não Informado',
+        builder: (_, value, __) {
+          return Text(
+            'E ai, $value',
+            style: context.titleStyle.copyWith(fontWeight: FontWeight.bold),
+          );
+        },
+      ),
     );
   }
 }
