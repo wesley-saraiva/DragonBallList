@@ -1,5 +1,4 @@
 import 'package:todo_list_provider/app/core/notifier/default_change_notifer.dart';
-import 'package:todo_list_provider/app/models/month_task_model.dart';
 import 'package:todo_list_provider/app/models/task_filter_enum.dart';
 import 'package:todo_list_provider/app/models/task_model.dart';
 import 'package:todo_list_provider/app/models/total_task_model.dart';
@@ -12,7 +11,6 @@ class HomeController extends DefaultChangeNotifer {
   TotalTaskModel? todayTotalTasks;
   TotalTaskModel? tomorrowTotalTasks;
   TotalTaskModel? weekTotalTasks;
-  TotalTaskModel? monthTotalTasks;
   List<TaskModel> allTasks = [];
   List<TaskModel> filteredTasks = [];
   DateTime? initialDateOfWeek;
@@ -27,12 +25,10 @@ class HomeController extends DefaultChangeNotifer {
       _taskService.getToday(),
       _taskService.getTomorrow(),
       _taskService.getWeek(),
-      _taskService.getMonth(),
     ]);
     final todayTasks = allTasks[0] as List<TaskModel>;
     final tomorrowTasks = allTasks[1] as List<TaskModel>;
     final weekTasks = allTasks[2] as WeekTaskModel;
-    final monthTasks = allTasks[3] as MonthTaskModel;
 
     todayTotalTasks = TotalTaskModel(
       totalTasks: todayTasks.length,
@@ -46,10 +42,7 @@ class HomeController extends DefaultChangeNotifer {
       totalTasks: weekTasks.tasks.length,
       totalTasksFinish: weekTasks.tasks.where((task) => task.finished).length,
     );
-    monthTotalTasks = TotalTaskModel(
-      totalTasks: monthTasks.tasks.length,
-      totalTasksFinish: monthTasks.tasks.where((task) => task.finished).length,
-    );
+
     notifyListeners();
   }
 
@@ -71,11 +64,6 @@ class HomeController extends DefaultChangeNotifer {
         final weekModel = await _taskService.getWeek();
         initialDateOfWeek = weekModel.startDate;
         tasks = weekModel.tasks;
-        break;
-
-      case TaskFilterEnum.month:
-        final monthModel = await _taskService.getMonth();
-        tasks = monthModel.tasks;
         break;
     }
     filteredTasks = tasks;
@@ -127,5 +115,17 @@ class HomeController extends DefaultChangeNotifer {
   void showOrHideFinishTask() {
     showFinishTasks = !showFinishTasks;
     refreshPage();
+  }
+
+  Future<void> deleteTask({required TaskModel task}) async {
+    showLoadingAndResetState();
+    notifyListeners();
+    await _taskService.deleteTaskById(id: task.id);
+    hideLoading();
+    refreshPage();
+  }
+
+  Future<void> clearTableTodo() async {
+    await _taskService.clearTableTodo();
   }
 }

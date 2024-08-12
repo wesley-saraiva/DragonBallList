@@ -76,11 +76,15 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             Text(
               'Todo List DBZ',
-              style: TextStyle(fontSize: 10, color: context.primaryColor),
+              style: TextStyle(
+                  fontSize: 10, color: Color.fromARGB(255, 142, 216, 144)),
             ),
             Text(
               'Cadastro',
-              style: TextStyle(fontSize: 15, color: context.primaryColor),
+              style: TextStyle(
+                fontSize: 15,
+                color: Color.fromARGB(255, 142, 216, 144),
+              ),
             ),
           ],
         ),
@@ -94,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Icon(
                 Icons.arrow_back_ios_outlined,
                 size: 20,
-                color: context.primaryColor,
+                color: Color.fromARGB(255, 142, 216, 144),
               ),
             ),
           ),

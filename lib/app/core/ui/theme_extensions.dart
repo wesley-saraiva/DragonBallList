@@ -12,7 +12,10 @@ extension ThemeExtensions on BuildContext {
       color: Color.fromARGB(255, 129, 219, 132));
 
   TextStyle get titleStyle2 => TextStyle(
+      fontSize: 15, fontWeight: FontWeight.bold, color: Colors.yellow);
+
+  TextStyle get titleStyle3 => TextStyle(
       fontSize: 15,
       fontWeight: FontWeight.bold,
-      color: Color.fromARGB(255, 129, 219, 132));
+      color: Color.fromARGB(255, 142, 216, 144));
 }

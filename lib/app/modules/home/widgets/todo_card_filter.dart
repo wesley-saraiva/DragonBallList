@@ -58,7 +58,7 @@ class TodoCardFilter extends StatelessWidget {
               '${totalTaskModel?.totalTasks ?? 0}TASKS',
               style: context.titleStyle.copyWith(
                 fontSize: 10,
-                color: selected ? Colors.yellow : context.primaryColor,
+                color: Color.fromARGB(255, 142, 216, 144),
               ),
             ),
             Text(
@@ -66,7 +66,7 @@ class TodoCardFilter extends StatelessWidget {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: selected ? Colors.yellow : context.primaryColor),
+                  color: Color.fromARGB(255, 142, 216, 144)),
             ),
             TweenAnimationBuilder<double>(
               tween: Tween(
@@ -79,7 +79,8 @@ class TodoCardFilter extends StatelessWidget {
                   backgroundColor: selected
                       ? context.primaryColorLight
                       : Colors.grey.shade300,
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.yellow),
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                      Color.fromARGB(255, 142, 216, 144)),
                   value: value,
                 );
               },

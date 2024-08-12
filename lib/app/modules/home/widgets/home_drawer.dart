@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 import 'package:todo_list_provider/app/services/user/user_service.dart';
 import 'package:flutter_overlay_loader/flutter_overlay_loader.dart';
 
+import '../home_controller.dart';
+
 class HomeDrawer extends StatefulWidget {
   HomeDrawer({super.key});
 
@@ -19,25 +21,35 @@ class _HomeDrawerState extends State<HomeDrawer> {
   final nameVN = ValueNotifier<String>('');
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: context.primaryColor.withAlpha(70),
+              color: Colors.green,
+              image: DecorationImage(
+                image: NetworkImage(
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTln6M7PmkjhhGZLHkDG3pmdd6K13z-FqJ87Q&s'),
+                fit: BoxFit.cover,
+              ),
             ),
             child: Row(
               children: [
                 Selector<AuthProvide, String>(
                   selector: (context, authProvider) {
                     return authProvider.user?.photoURL ??
-                        'https://cdn.rcn67.com.br/upload/dn_arquivo/2023/01/zeze-di-camargo-predio-homenagem-pai-francisco-camargo-1.jpg';
+                        'https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-667237-52.jpg';
                   },
                   builder: (_, value, __) {
                     return CircleAvatar(
                       backgroundImage: NetworkImage(value),
-                      radius: 30,
+                      radius: 35,
                     );
                   },
                 ),
@@ -52,7 +64,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                       builder: (_, value, __) {
                         return Text(
                           value,
-                          style: context.textTheme.titleSmall,
+                          style: context.titleStyle3,
                         );
                       },
                     ),
@@ -100,11 +112,20 @@ class _HomeDrawerState extends State<HomeDrawer> {
                 },
               );
             },
-            title: Text('Alterar Nome'),
+            title: Text(
+              'Alterar Nome',
+              style: context.titleStyle3,
+            ),
           ),
           ListTile(
-            onTap: () => context.read<AuthProvide>().logout(),
-            title: Text('Sair'),
+            onTap: () {
+              context.read<HomeController>().clearTableTodo();
+              context.read<AuthProvide>().logout();
+            },
+            title: Text(
+              'Sair',
+              style: context.titleStyle3,
+            ),
           ),
         ],
       ),

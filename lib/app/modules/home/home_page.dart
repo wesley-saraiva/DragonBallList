@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: context.primaryColor),
+        iconTheme: IconThemeData(color: Color.fromARGB(255, 142, 216, 144)),
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: context.primaryColor,
         child: Icon(
           Icons.add,
-          color: Colors.yellow,
+          color: Color.fromARGB(255, 142, 216, 144),
         ),
       ),
       backgroundColor: Colors.white,

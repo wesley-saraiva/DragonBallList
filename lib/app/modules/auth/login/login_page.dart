@@ -110,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                                   },
                                   child: Text(
                                     'Esqueceu sua senha?',
-                                    style: context.titleStyle2,
+                                    style: context.titleStyle3,
                                   ),
                                 ),
                                 ElevatedButton(
@@ -186,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
                                   },
                                   child: Text(
                                     'Cadastra-se',
-                                    style: context.titleStyle2,
+                                    style: context.titleStyle3,
                                   ),
                                 ),
                               ],

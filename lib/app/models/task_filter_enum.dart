@@ -2,7 +2,6 @@ enum TaskFilterEnum {
   today,
   tomorrow,
   week,
-  month,
 }
 
 extension TaskFilterDescription on TaskFilterEnum {
@@ -14,8 +13,6 @@ extension TaskFilterDescription on TaskFilterEnum {
         return "DE AMANHÃ";
       case TaskFilterEnum.week:
         return "DA SEMANA";
-      case TaskFilterEnum.month:
-        return "DO MÊS";
     }
   }
 }

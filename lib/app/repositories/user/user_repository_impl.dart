@@ -120,7 +120,6 @@ class UserRepositoryImpl implements UserRepository {
   Future<void> logout() async {
     await GoogleSignIn().signOut();
     _auth.signOut();
-    print('Usuario desconectado');
   }
 
   @override

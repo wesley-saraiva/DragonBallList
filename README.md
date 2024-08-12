@@ -1,9 +1,7 @@
-![alt text](image.png)
-
-# Dragon Ball List
+<!-- # Dragon Ball List
 
 Estou empolgado em publicar meu mais recente projeto desenvolvido em Flutter - Dragon Ball List !
-Para aqueles que são fã de Dragon Ball tive a intensão . Na construção do app foi utilizado na parte de Back-end o [Back4app](https://blog.back4app.com/pt/o-que-e-o-backend-como-servico/), de gerenciador de estado foi usado o [Cubit](https://blog.flutterando.com.br/cubit-uma-solu%C3%A7%C3%A3o-simples-para-ger%C3%AAncia-de-estado-no-flutter-c8f594e618fc). 📱💪
+Para aqueles que são fã de Dragon Ball tive a intensão Na construção do app foi utilizado na parte de Back-end o [Back4app](https://blog.back4app.com/pt/o-que-e-o-backend-como-servico/), de gerenciador de estado foi usado o [Cubit](https://blog.flutterando.com.br/cubit-uma-solu%C3%A7%C3%A3o-simples-para-ger%C3%AAncia-de-estado-no-flutter-c8f594e618fc). 📱💪
 
 ## Principais Destaques:
 
@@ -20,6 +18,8 @@ Para aqueles que são fã de Dragon Ball tive a intensão . Na construção do a
 ## Tecnologias Utilizadas:
 
 - Flutter para o desenvolvimento da UI.
+- SQLite banco de dados local.
+- Firebase Auth para autenticação de usuário.
 - Dart como linguagem principal.
 
 ## Experiência de Desenvolvimento:
@@ -39,4 +39,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 
 ## Licença
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto é licenciado sob a [Licença MIT](LICENSE). -->
