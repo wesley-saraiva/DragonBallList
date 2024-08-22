@@ -18,7 +18,7 @@ Para construção desse app, na parte de autenticação de usuário foi utilizad
 ## Capturas de Tela 📷
 
 ![Captura de Tela 1](Assets/00%20-%20assets/IMG-tela-login.jpg)![Captura de Tela 2](Assets/00%20-%20assets/IMG-register.jpg)![Captura de Tela 3](Assets/00%20-%20assets/IMG-home.jpg)![Captura de Tela 4](Assets/00%20-%20assets/IMG-filters.jpg)![Captura de Tela 5](Assets/00%20-%20assets/IMG-drawer.jpg)![Captura de Tela 6](Assets/00%20-%20assets/IMG-save-task.jpg)
-[Captura de Tela 6](Assets/00%20-%20assets/video%20dragon%20ball%20list.gif)
+![Captura de Tela 6](Assets/00%20-%20assets/video%20dragon%20ball%20list.gif)
 
 ## Tecnologias Utilizadas 📱
 
