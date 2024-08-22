@@ -6,18 +6,18 @@ Para construção desse app, na parte de autenticação de usuário foi utilizad
 
 ## Funcionalidades 🔨
 
-➡️ _Login:_ Insirir E-mail e senha normal ou login do Google atraves do Firebase Auth.                                                                                             
-➕ _Cadastro:_ Insirir E-mail e senha e confirmar senha, caso o usuário não tenha conta.                                        
-📝 _Alterar Nome:_ Alterar nome do usuário na parte do menu, caso queira.                                  
-↩️ _Logout:_ Após essa ação haverá uma exclusão das tasks que o usuário tinha cadastrado no banco de dados.                                             
-➕ _Criar Task:_ Insirir o nome da task e adicionar o dia para realização dessa task.                                            
-🔎 _Filtros(Hoje/Amanhã/Semana):_ Para visualização das tasks criadas nos dias escolhidos pelo usuário.                                        
-🔎 _Filtros(Mostrar Tasks Concluídas/ Esconder Tasks):_ Caso o usuário queira mostrar suas tasks concluídas ou esconde-las.                               
+➡️ _Login:_ Insirir E-mail e senha normal ou login do Google atraves do Firebase Auth.  
+➕ _Cadastro:_ Insirir E-mail e senha e confirmar senha, caso o usuário não tenha conta.  
+📝 _Alterar Nome:_ Alterar nome do usuário na parte do menu, caso queira.  
+↩️ _Logout:_ Após essa ação haverá uma exclusão das tasks que o usuário tinha cadastrado no banco de dados.  
+➕ _Criar Task:_ Insirir o nome da task e adicionar o dia para realização dessa task.  
+🔎 _Filtros(Hoje/Amanhã/Semana):_ Para visualização das tasks criadas nos dias escolhidos pelo usuário.  
+🔎 _Filtros(Mostrar Tasks Concluídas/ Esconder Tasks):_ Caso o usuário queira mostrar suas tasks concluídas ou esconde-las.  
 ❌ _Excluir:_ Para exclusão da task.
 
-## Demonstração do Dragon Ball List 📷
+## Capturas de Tela 📷
 
-![Captura de Tela 1](assets/00%20-%20assets/video%20dragon%20ball%20list.gif)
+![Captura de Tela 1](assets/00%20-%20assets/IMG-tela-login.jpg)![Captura de Tela 2](assets/00%20-%20assets/IMG-register.jpg)![Captura de Tela 3](assets/00%20-%20assets/IMG-home.jpg)![Captura de Tela 4](assets/00%20-%20assets/IMG-filters.jpg)![Captura de Tela 5](assets/00%20-%20assets/IMG-drawer.jpg)![Captura de Tela 6](assets/00%20-%20assets/IMG-save-task.jpg)
 
 ## Tecnologias Utilizadas 📱
 
