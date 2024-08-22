@@ -12,7 +12,7 @@ Para construção desse app, na parte de autenticação de usuário foi utilizad
 ↩️ _Logout:_ Após essa ação haverá uma exclusão das tasks que o usuário tinha cadastrado no banco de dados.                                             
 ➕ _Criar Task:_ Insirir o nome da task e adicionar o dia para realização dessa task.                                            
 🔎 _Filtros(Hoje/Amanhã/Semana):_ Para visualização das tasks criadas nos dias escolhidos pelo usuário.                                        
-🔎 _Filtros(Mostrar Tasks Concluídas/ Esconder Tarefas):_ Caso o usuário queira mostrar suas tasks concluídas ou esconde-las.                               
+🔎 _Filtros(Mostrar Tasks Concluídas/ Esconder Tasks):_ Caso o usuário queira mostrar suas tasks concluídas ou esconde-las.                               
 ❌ _Excluir:_ Para exclusão da task.
 
 ## Demonstração do Dragon Ball List 📷
