@@ -24,7 +24,7 @@ Para construção desse app, na parte de autenticação de usuário foi utilizad
   <img src="Assets/00%20-%20assets/IMG-filters.jpg" alt="Captura de Tela 4" width="300"/>
   <img src="Assets/00%20-%20assets/IMG-drawer.jpg" alt="Captura de Tela 5" width="300"/>
   <img src="Assets/00%20-%20assets/IMG-save-task.jpg" alt="Captura de Tela 6" width="300"/>
-  <img src="Assets/00%20-%20assets/video%20dragon%20ball%20list.gif" alt="Captura de Tela 7" width="300"/>
+  <img src="Assets/00%20-%20assets/video%20dragon%20ball%20list.gif" alt="Captura de Tela 7" width="400"/>
   
 </p>
 
